@@ -1,0 +1,5 @@
+/* Sage parent theme */
+@import '@sage/styles/editor.css';
+
+/* Base */
+@import './base/config.css';
