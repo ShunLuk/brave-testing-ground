@@ -43,3 +43,10 @@ Ignition::make()
 	->setEditor(env('IGNITION_EDITOR') ?? 'phpstorm')
 	->setTheme(env('IGNITION_THEME') ?? 'auto')
 	->register();
+
+/**
+ * Multisite
+ */
+Config::define('WP_ALLOW_MULTISITE', false);
+Config::define('MULTISITE', false);
+Config::define('SUBDOMAIN_INSTALL', false);

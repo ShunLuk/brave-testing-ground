@@ -7,6 +7,7 @@
 
 /* Components */
 @import './components/accordion';
+@import './components/button';
 @import './components/cards';
 @import './components/cookie-yes';
 @import './components/facetwp';
@@ -20,6 +21,7 @@
 
 /* Elements */
 @import './elements/lists';
+@import './elements/frontpage-banner';
 
 /* Blocks */
 @import './blocks/breadcrumbs/shared';
@@ -42,3 +44,4 @@
 @import './layouts/404';
 @import './layouts/print';
 @import './layouts/alignments';
+@import './layouts/frontpage';
