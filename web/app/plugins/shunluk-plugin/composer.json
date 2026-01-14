@@ -1,0 +1,5 @@
+{
+    "require": {
+        "yard/wp-hook-registrar": "^2.0"
+    }
+}
