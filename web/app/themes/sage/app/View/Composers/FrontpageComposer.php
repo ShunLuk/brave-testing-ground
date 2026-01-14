@@ -32,17 +32,26 @@ class FrontpageComposer extends Composer
         $title = get_field('title') ?? 'Hello World!';
         $subtitle = get_field('subtitle') ?? 'Just another Brave Theme';
         $banner_id = get_field('banner_image') ?? '';
+        $buttons = get_field('buttons') ?? [];
 
         if ($banner_id && $banner_id != '') {
             $banner = wp_get_attachment_image($banner_id, 'medium', false, ['class'=> '']);
         }
-        
+
         $banner = [
             'title' => $title,
             'subtitle' => $subtitle,
             'image' => $banner,
         ];
 
+        if ($buttons && count($buttons)) {
+            $buttonsArr = [];
+            foreach($buttons as $buttonKey => $button) {
+                $buttonsArr[$buttonKey] = (object)$button;
+            }
+            $banner['buttons'] = (object)$buttonsArr;
+        }
+        
         return (object) $banner;
     }
 }
