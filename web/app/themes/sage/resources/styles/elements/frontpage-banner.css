@@ -3,7 +3,7 @@
     color: #ead196;
 
     .banner-inner {
-        @apply flex flex-col mx-auto md:flex-row md:items-center;
+        @apply flex flex-col md:flex-row md:items-center md:mx-auto;
         min-height: 500px;
         max-width: var(--content-container-width);
     

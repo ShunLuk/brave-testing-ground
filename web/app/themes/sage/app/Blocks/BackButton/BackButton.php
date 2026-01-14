@@ -11,7 +11,7 @@ class BackButton
 {
 	public function render(array $attributes): string
 	{
-		if ($this->postDoesNotHaveParent()) {
+		if ($this->postDoesNotHaveParent()) { // don't render the component if not a post or post has no parent.
 			return '';
 		}
 
