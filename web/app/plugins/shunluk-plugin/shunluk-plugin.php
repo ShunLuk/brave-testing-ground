@@ -21,6 +21,8 @@ if ( ! defined( 'ABSPATH' )) {
 
 use Yard\Hook\Registrar;
 
+define( 'PLUGIN_PATH', plugin_dir_path( __FILE__ ) );
+
 if ( ! class_exists('ShunLukPlugin') ) {
     class ShunLukPlugin {
         public function __construct() {
@@ -59,10 +61,8 @@ if ( ! class_exists('ShunLukPlugin') ) {
         private function hooks()
         {
             $registrar = new Registrar();
-            $registrar->addClass(
-                Hooks\ShortcodeHooks::class
-            );
-            // dd($registrar);
+            $registrar->addClass(Hooks\ViewHooks::class);
+            $registrar->addClass(Hooks\ShortcodeHooks::class);
             $registrar->registerHooks();
         }
     }
