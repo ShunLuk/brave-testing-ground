@@ -4,4 +4,5 @@
 		@php(the_content())
 	@endwhile
     Hello World!
+	{{-- @php(dd($siteName)) --}}
 </x-layout>

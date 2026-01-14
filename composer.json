@@ -91,7 +91,8 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"App\\": "web/app/themes/sage/app/"
+			"App\\": "web/app/themes/sage/app/",
+			"ShunLuk\\App\\": "web/app/themes/shun-luk-brave/app/"
 		}
 	},
 	"extra": {
