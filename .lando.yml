@@ -1,4 +1,10 @@
-name: brave
+name: brave-test
+recipe: wordpress
+config:
+  webroot: web
+services:
+  appserver:
+    type: php:8.3
 
 proxy:
   appserver_nginx:
