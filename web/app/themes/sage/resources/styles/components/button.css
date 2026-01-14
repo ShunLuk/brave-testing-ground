@@ -1,0 +1,19 @@
+.button {
+    background-color: #bf3131;
+    color: #ead196;
+    border: 2px solid #bf3131;
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 8px;
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: #ead196;
+        color: #bf3131;
+        border-color: #ead196;
+    }
+}
+
+.banner-button {
+}

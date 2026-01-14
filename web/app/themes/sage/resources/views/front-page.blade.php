@@ -11,17 +11,17 @@
 					<div class="banner-buttons">
 						<div class="banner-buttons-grouped">
 							@if($buttons->linkedin) @php($linkedin = $buttons->linkedin)
-								<x-button :title="$linkedin->title" :url="$linkedin->url" :target="$linkedin->target" />
+								<x-button :title="$linkedin->title" :url="$linkedin->url" :target="$linkedin->target" :extra-classes="['banner-button']" />
 							@endif
 							@if($buttons->github) @php($github = $buttons->github)
-								<x-button :title="$github->title" :url="$github->url" :target="$github->target" />
+								<x-button :title="$github->title" :url="$github->url" :target="$github->target" :extra-classes="['banner-button']" />
 							@endif
 							@if($buttons->dribbble) @php($dribbble = $buttons->dribbble)
-								<x-button :title="$dribbble->title" :url="$dribbble->url" :target="$dribbble->target" />
+								<x-button :title="$dribbble->title" :url="$dribbble->url" :target="$dribbble->target" :extra-classes="['banner-button']" />
 							@endif
 						</div>
 						@if($buttons->contact) @php($contact = $buttons->contact)
-							<x-button :title="$contact->title" :url="$contact->url" :target="$contact->target" />
+							<x-button :title="$contact->title" :url="$contact->url" :target="$contact->target" :extra-classes="['banner-button']" />
 						@endif
 					</div>
 				@endif
