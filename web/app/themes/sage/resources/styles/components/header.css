@@ -20,4 +20,17 @@
             }
         }
     }
+
+    .nav-primary {
+        .menu-item a {
+            color: #ead196;
+
+            &:hover,
+            &:focus,
+            &:active {
+                color: #ead196;
+                border-bottom-color: #ead196;
+            }
+        }
+    }
 }
