@@ -2,8 +2,11 @@
 
 # Brave based test site
 Attempting to use Yard Agency's Brave template to make a Bedrock based Wordpress site with a Sage based theme.
+
 Design can be found here: https://www.figma.com/proto/x5n0Cj1cLaRBgj5im0dj5A/shunluk.com?node-id=82-83&t=3cdhvUv5T0mJ2Ctf-1
-Website hosted here: shunluk.com
+
+Website will be hosted here: shunluk.com
+
 
 # Brave
 
