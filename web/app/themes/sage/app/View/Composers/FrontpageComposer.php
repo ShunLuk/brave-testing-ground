@@ -12,7 +12,6 @@ class FrontpageComposer extends Composer
      * @var string[]
      */
     protected static $views = [
-        '*',
         'front-page',
     ];
     
@@ -35,7 +34,7 @@ class FrontpageComposer extends Composer
         $buttons = get_field('buttons') ?? [];
 
         if ($banner_id && $banner_id != '') {
-            $banner = wp_get_attachment_image($banner_id, 'medium', false, ['class'=> '']);
+            $banner = wp_get_attachment_image($banner_id, 'large', false, ['class'=> '']);
         }
 
         $banner = [
