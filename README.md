@@ -1,5 +1,10 @@
 [![Code Style](https://github.com/yardinternet/brave/actions/workflows/format-php.yml/badge.svg?no-cache)](https://github.com/yardinternet/brave/actions/workflows/format-php.yml)
 
+# Brave based test site
+Attempting to use Yard Agency's Brave template to make a Bedrock based Wordpress site with a Sage based theme.
+Design can be found here: https://www.figma.com/proto/x5n0Cj1cLaRBgj5im0dj5A/shunluk.com?node-id=82-83&t=3cdhvUv5T0mJ2Ctf-1
+Website hosted here: shunluk.com
+
 # Brave
 
 Brave is a template for making WordPress sites. It is primarily a combination of [Bedrock](https://roots.io/bedrock/), [Acorn](https://roots.io/acorn/) and [Sage](https://roots.io/sage/), with a few modifications and additional features.
