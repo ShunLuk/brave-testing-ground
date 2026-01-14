@@ -1,5 +1,12 @@
 {
+	"repositories": [
+		{
+            "type": "vcs",
+            "url": "git@github.com:yardinternet/wp-live-content.git"
+        }
+	],
     "require": {
-        "yard/wp-hook-registrar": "^2.0"
+        "yard/wp-hook-registrar": "2.0.1 as 1.0.0",
+		"yard/wp-live-content": "^1.0"
     }
 }
