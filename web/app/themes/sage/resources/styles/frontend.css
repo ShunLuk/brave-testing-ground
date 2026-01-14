@@ -14,6 +14,7 @@
 @import './components/footer';
 @import './components/forms';
 @import './components/gravity-forms';
+@import './components/header';
 @import './components/mobile-menu';
 @import './components/nav';
 @import './components/search-bar';

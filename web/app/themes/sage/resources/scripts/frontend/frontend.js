@@ -7,6 +7,7 @@ import {
 	A11yMobileMenu,
 	FocusStyle,
 	WebShareApi,
+	EnhanceExternalLinks,
 } from '@yardinternet/brave-frontend-kit';
 
 /**
@@ -32,4 +33,12 @@ window.addEventListener( 'DOMContentLoaded', () => {
 	Navigation();
 	SearchBar();
 	new WebShareApi();
+} );
+
+// Enhance External Links
+new EnhanceExternalLinks( {
+ selector: '.main a',
+ icon: '<i class="fa-regular fa-up-right-from-square mx-2"></i>',
+ excludedClasses: [ 'wp-block-button__link', 'banner-button' ],
+ excludedUrlKeywords: [ 'openpdc' ],
 } );

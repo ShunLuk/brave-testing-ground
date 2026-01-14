@@ -1,0 +1,23 @@
+.header {
+    background-color: #7d0a0a;
+
+    .site-branding-logo {
+        min-height: 125px;
+    }
+
+    .search-bar-open-btn {
+        svg {
+            fill: #ead196;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: #ead196;
+            
+            svg {
+                fill: #7d0a0a;
+            }
+        }
+    }
+}
