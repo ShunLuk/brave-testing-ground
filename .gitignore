@@ -44,3 +44,6 @@ web/app/wflogs
 
 # Husky
 .husky/_
+
+# Shun's keeps
+!web/app/plugins/shunluk-plugin

@@ -1,6 +1,7 @@
 @import './base/config';
 
 /* Base */
+@import './base/fonts';
 @import './base/base';
 @import './base/variables';
 @import './base/utilities';
@@ -14,6 +15,7 @@
 @import './components/footer';
 @import './components/forms';
 @import './components/gravity-forms';
+@import './components/header';
 @import './components/mobile-menu';
 @import './components/nav';
 @import './components/search-bar';

@@ -1,0 +1,40 @@
+{
+	"name": "yard/wp-hook-registrar",
+	"type": "package",
+	"description": "A package for WordPress hook registration.",
+	"license": "MIT",
+	"config": {
+		"allow-plugins": {
+			"pestphp/pest-plugin": true
+		},
+		"platform": {
+			"php": "8.1"
+		},
+		"sort-packages": true
+	},
+	"require": {
+		"php": ">=8.1"
+	},
+	"require-dev": {
+		"10up/wp_mock": "^0.4.2",
+		"pestphp/pest": "^2.34",
+		"szepeviktor/phpstan-wordpress": "^1.0",
+		"yard/php-cs-fixer-rules": "^1.0"
+	},
+	"autoload": {
+		"psr-4": {
+			"Yard\\Hook\\": "src/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"Yard\\Hook\\Tests\\": "tests/"
+		}
+	},
+	"scripts": {
+		"analyse": "vendor/bin/phpstan analyse --debug --memory-limit 1G",
+		"format": "vendor/bin/php-cs-fixer fix",
+		"test": "vendor/bin/pest",
+		"test:coverage": "XDEBUG_MODE=coverage vendor/bin/pest --coverage"
+	}
+}
