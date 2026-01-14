@@ -1,0 +1,30 @@
+.frontpage-banner {
+    @apply flex flex-col md:flex-row md:items-center;
+
+    .banner-image {
+        @apply flex justify-center;
+    }
+
+    .banner-content {
+        @apply flex flex-col text-left md:text-center;
+    }
+
+    .banner-buttons {
+        @apply flex flex-col;
+        gap: 8px;
+        align-items: center;
+    }
+
+    .banner-buttons-grouped {
+        @apply flex;
+        gap: 8px;
+    }
+
+    .banner-button-contact {
+        border-color: #ead196;
+        text-align: center;
+        padding-left: 16px;
+        padding-right: 16px;
+        min-width: 150px;
+    }
+}

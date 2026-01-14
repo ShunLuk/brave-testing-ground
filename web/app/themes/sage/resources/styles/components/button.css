@@ -5,6 +5,7 @@
     border-radius: 5px;
     font-weight: bold;
     padding: 8px;
+    text-decoration: none;
 
     &:hover,
     &:focus,

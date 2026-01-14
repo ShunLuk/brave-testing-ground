@@ -21,6 +21,7 @@
 
 /* Elements */
 @import './elements/lists';
+@import './elements/frontpage-banner';
 
 /* Blocks */
 @import './blocks/breadcrumbs/shared';

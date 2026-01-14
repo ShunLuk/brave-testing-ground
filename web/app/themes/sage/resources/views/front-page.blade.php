@@ -1,10 +1,10 @@
 <x-layout>
-	<div class="flex flex-col md:flex-row md:items-center">
+	<div class="frontpage-banner">
 		@if($banner)
-			<div class="banner-image flex justify-center">
+			<div class="banner-image">
 				{!! $banner->image !!}
 			</div>
-			<div class="banner-content flex flex-col text-left md:text-center">
+			<div class="banner-content">
 				<h1>{{ $banner->title }}</h1>
 				<span>{{ $banner->subtitle }}</span>
 				@if($banner->buttons) @php($buttons = $banner->buttons)
@@ -21,7 +21,7 @@
 							@endif
 						</div>
 						@if($buttons->contact) @php($contact = $buttons->contact)
-							<x-button :title="$contact->title" :url="$contact->url" :target="$contact->target" :extra-classes="['banner-button']" />
+							<x-button :title="$contact->title" :url="$contact->url" :target="$contact->target" :extra-classes="['banner-button banner-button-contact']" />
 						@endif
 					</div>
 				@endif
