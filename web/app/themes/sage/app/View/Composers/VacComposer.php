@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace App\View\Composers;
 
-use Illuminate\Support\Facades\Http;
 use Roots\Acorn\View\Composer;
+use Illuminate\Support\Facades\Http;
 
 class VacComposer extends Composer
 {
@@ -15,7 +15,7 @@ class VacComposer extends Composer
 	 * @var string[]
 	 */
 	protected static $views = [
-		'template-vacs',
+		'template-vacs'
 	];
 
 	/**
