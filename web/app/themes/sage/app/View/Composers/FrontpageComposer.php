@@ -1,56 +1,62 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\View\Composers;
 
 use Roots\Acorn\View\Composer;
 
 class FrontpageComposer extends Composer
 {
-    /**
-     * List of views served by this composer.
-     *
-     * @var string[]
-     */
-    protected static $views = [
-        'front-page',
-    ];
-    
-    /**
-     * This will make the variable `$roots` available in the 'example' partial
-     * with the value described here.
-     */
-    public function with()
-    {
-        return [
-            'banner' => $this->getBannerData(),
-        ];
-    }
+	/**
+	 * List of views served by this composer.
+	 *
+	 * @var string[]
+	 */
+	protected static $views = [
+		'front-page',
+	];
 
-    private function getBannerData()
-    {
-        $title = get_field('title') ?? 'Hello World!';
-        $subtitle = get_field('subtitle') ?? 'Just another Brave Theme';
-        $banner_id = get_field('banner_image') ?? '';
-        $buttons = get_field('buttons') ?? [];
+	/**
+	 * This will make the variable `$roots` available in the 'example' partial
+	 * with the value described here.
+	 */
+	public function with()
+	{
+		return [
+			'banner' => $this->getBannerData(),
+		];
+	}
 
-        if ($banner_id && $banner_id != '') {
-            $banner = wp_get_attachment_image($banner_id, 'large', false, ['class'=> '']);
-        }
+	private function getBannerData()
+	{
+		$title = get_field('title') ?? 'Hello World!';
+		$subtitle = get_field('subtitle') ?? 'Just another Brave Theme';
+		$banner_id = get_field('banner_image') ?? '';
+		$buttons = get_field('buttons') ?? [];
 
-        $banner = [
-            'title' => $title,
-            'subtitle' => $subtitle,
-            'image' => $banner,
-        ];
+		if ($banner_id && '' != $banner_id) {
+			$banner = wp_get_attachment_image($banner_id, 'large', false, ['class' => '']);
+		}
 
-        if ($buttons && count($buttons)) {
-            $buttonsArr = [];
-            foreach($buttons as $buttonKey => $button) {
-                $buttonsArr[$buttonKey] = (object)$button;
-            }
-            $banner['buttons'] = (object)$buttonsArr;
-        }
-        
-        return (object) $banner;
-    }
+		$banner = [
+			'title' => $title,
+			'subtitle' => $subtitle,
+			'image' => $banner,
+		];
+
+		if ($buttons && count($buttons)) {
+			$buttonsArr = [];
+			foreach ($buttons as $buttonKey => $button) {
+				if ($button && '' !== $button) {
+					$buttonsArr[$buttonKey] = (object)$button;
+				}
+			}
+			if (count($buttonsArr)) {
+				$banner['buttons'] = (object)$buttonsArr;
+			}
+		}
+
+		return (object) $banner;
+	}
 }
