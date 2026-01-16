@@ -8,7 +8,7 @@
 				<div class="banner-content">
 					<h1>{{ $banner->title }}</h1>
 					<span>{{ $banner->subtitle }}</span>
-					@if($banner->buttons) @php($buttons = $banner->buttons)
+					@if(property_exists($banner, 'buttons')) @php($buttons = $banner->buttons)
 						<div class="banner-buttons">
 							<div class="banner-buttons-grouped">
 								@if($buttons->linkedin) @php($linkedin = $buttons->linkedin)

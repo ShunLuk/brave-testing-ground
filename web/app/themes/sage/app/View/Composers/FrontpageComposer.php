@@ -14,7 +14,7 @@ class FrontpageComposer extends Composer
     protected static $views = [
         'front-page',
     ];
-    
+
     /**
      * This will make the variable `$roots` available in the 'example' partial
      * with the value described here.
@@ -46,11 +46,15 @@ class FrontpageComposer extends Composer
         if ($buttons && count($buttons)) {
             $buttonsArr = [];
             foreach($buttons as $buttonKey => $button) {
-                $buttonsArr[$buttonKey] = (object)$button;
+				if ($button && $button !== '') {
+					$buttonsArr[$buttonKey] = (object)$button;
+				}
             }
-            $banner['buttons'] = (object)$buttonsArr;
+			if(count($buttonsArr)) {
+				$banner['buttons'] = (object)$buttonsArr;
+			}
         }
-        
+
         return (object) $banner;
     }
 }
