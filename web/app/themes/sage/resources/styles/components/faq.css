@@ -1,0 +1,47 @@
+.faqs {
+	@apply flex w-full flex-col;
+}
+
+.faq-item {
+	@apply flex w-full flex-col;
+
+	&.open {
+		.faq-item-answer {
+			display: block;
+		}
+	}
+}
+
+.faq-item-question {
+	@apply flex w-full flex-row justify-between;
+}
+
+.faq-item-toggler {
+	&.open {
+		display: none;
+	}
+
+	&.closed {
+		display: block;
+	}
+}
+
+.faq-item-answer {
+	display: none;
+}
+
+.faq-item-answer-intro {
+	/* answer intro styling */
+}
+
+.faq-item-answer-paragraph {
+	/* answer paragraph styling */
+}
+
+.faq-item-answer-paragraph-title {
+	/* answer paragraph title styling */
+}
+
+.faq-pagination {
+	/* answer pagination styling */
+}
