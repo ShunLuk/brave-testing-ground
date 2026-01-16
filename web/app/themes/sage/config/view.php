@@ -87,6 +87,7 @@ return [
 		'postDataCollection' => App\View\Composers\PostDataCollectionComposer::class,
 		'postData' => App\View\Composers\PostDataComposer::class,
 		'FrontpageComposer' => App\View\Composers\FrontpageComposer::class,
+		'VacComposer' => App\View\Composers\VacComposer::class,
 	],
 
 	/*
